@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 006 - Banco de dados da Agenda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="root">
+        <div class="left">
+            <h2 class="title">Tabela de Conteúdos</h2>
+            <ul class="topics">
+                <li class="link">
+                    <a href="#der">1. Diagrama Entidade-Relacionamento</a>
+                </li>
+                <li class="link">
+                    <a href="#dictionary">2. Dicionário de dados</a>
+                </li>
+            </ul>
+        </div>
+        <main class="main">
+            <h1 class="title">Atividade 006 - Banco de Dados da Agenda</h1>
+            <ul class="content">
+                <li class="item" id="der">
+                    <h2 class="title">Diagrama Entidade-Relacionamento</h2>
+                    <img src="./assets/der.png" alt="DER">
+                    <p class="text">O diagrama entidade-relacionamento do sistema apresenta duas entidades: usuários e
+                        seus respectivos eventos. Para a geração desde diagrama, foi utilizado o <a
+                            href="https://www.mysql.com/products/workbench/">MySQL Workbench</a> para a geração
+                        automatizada do esquema e das tabelas.</p>
+                </li>
+                <li class="item" id="dictionary">
+                    <h2 class="title">Dicionário de dados</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="5">Tabela: Usuário</th>
+                            </tr>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Classe</th>
+                                <th>Tipo</th>
+                                <th>Tamanho</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="5">Tabela: Evento</th>
+                            </tr>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Classe</th>
+                                <th>Tipo</th>
+                                <th>Tamanho</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                                <td>The table body</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text">Essá é uma descrição</p>
+                </li>
+            </ul>
+
+            <footer class="footer">
+                MPS | 2023
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        const footer = document.querySelector('footer')
+        footer.innerHTML = `MPS | ${new Date().getFullYear()}`
+    </script>
+</body>
+
+</html>
