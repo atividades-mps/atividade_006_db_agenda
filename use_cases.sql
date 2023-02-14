@@ -61,6 +61,10 @@ WHERE usuario_id = 2;
 DELETE FROM agenda_usuario
 WHERE usuario_id = 2;
 
+UPDATE agenda_eventos
+SET usuario_status = 2
+WHERE usuario_id = 2
+
 -- ====================================================
 -- 10. Filtrar eventos de um usuário do dia atual
 SELECT e.*
