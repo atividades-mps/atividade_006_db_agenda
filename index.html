@@ -35,6 +35,8 @@
                 </li>
                 <li class="item" id="dictionary">
                     <h2 class="title">Dicionário de dados</h2>
+                    <p class="text">Com base no diagrama entidade-relacionamento mostrado anteriormente, abaixo consta o
+                        dicionário de dados descrevendo os atributos e seus tipos e tamanhos.</p>
                     <table class="table">
                         <thead>
                             <tr>
@@ -50,11 +52,32 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>The table body</td>
-                                <td>The table body</td>
-                                <td>The table body</td>
-                                <td>The table body</td>
-                                <td>The table body</td>
+                                <td>usuario_id</td>
+                                <td>Identificador</td>
+                                <td>INT</td>
+                                <td>2147483647</td>
+                                <td>Atributo que identifica um usuário</td>
+                            </tr>
+                            <tr>
+                                <td>usuario_nome</td>
+                                <td>Simples</td>
+                                <td>VARCHAR</td>
+                                <td>100</td>
+                                <td>Nome do usuário</td>
+                            </tr>
+                            <tr>
+                                <td>usuario_email</td>
+                                <td>Simples</td>
+                                <td>VARCHAR</td>
+                                <td>100</td>
+                                <td>E-mail do usuário</td>
+                            </tr>
+                            <tr>
+                                <td>usuario_status</td>
+                                <td>Simples</td>
+                                <td>INT</td>
+                                <td>2147483647</td>
+                                <td>Indica o status do usuário. Assume os valores: 0 (Deslogado), 1 (Logado)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -73,15 +96,49 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>The table body</td>
-                                <td>The table body</td>
-                                <td>The table body</td>
-                                <td>The table body</td>
-                                <td>The table body</td>
+                                <td>evento_id</td>
+                                <td>Identificador</td>
+                                <td>INT</td>
+                                <td>2147483647</td>
+                                <td>Atributo que identifica um evento</td>
+                            </tr>
+                            <tr>
+                                <td>evento_titulo</td>
+                                <td>Simples</td>
+                                <td>VARCHAR</td>
+                                <td>100</td>
+                                <td>Título do evento</td>
+                            </tr>
+                            <tr>
+                                <td>evento_descricao</td>
+                                <td>Simples</td>
+                                <td>VARCHAR</td>
+                                <td>200</td>
+                                <td>Descrição do evento</td>
+                            </tr>
+                            <tr>
+                                <td>evento_data_hora</td>
+                                <td>Simples</td>
+                                <td>DATETIME</td>
+                                <td>-</td>
+                                <td>Indica o horário e a data que o evento irá ocorrer</td>
+                            </tr>
+                            <tr>
+                                <td>evento_status</td>
+                                <td>Simples</td>
+                                <td>INT</td>
+                                <td>2147483647</td>
+                                <td>Indica o status do evento. Assume os valores: 0 (Pendente), 1 (Cancelado)</td>
+                            </tr>
+                            <tr>
+                                <td>usuario_id</td>
+                                <td>Chave estrangeira</td>
+                                <td>INT</td>
+                                <td>2147483647</td>
+                                <td>Faz referência a chave-primária pertencente a um usuário</td>
                             </tr>
                         </tbody>
                     </table>
-                    <p class="text">Essá é uma descrição</p>
                 </li>
             </ul>
 
