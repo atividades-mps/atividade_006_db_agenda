@@ -2,16 +2,16 @@
 
 ## **Fazer login**
 
-#### HTTP Request
+`POST /users/login`
 
-`GET /users/login`
+#### HTTP Request Body
 
-#### HTTP Params
-
-| Parâmetro | Tipo   | Descrição       | Obrigatório ✅/ Opcional ❌ |
-| --------- | ------ | --------------- | --------------------------- |
-| username  | string | Nome de usuário | ✅                          |
-| password  | string | Nome de usuário | ✅                          |
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
 
 #### HTTP Response
 
@@ -247,7 +247,7 @@
     "description": "string",
     "status": "number"
   }
-  //...
+  ...
 ]
 ```
 
@@ -276,6 +276,6 @@
     "description": "string",
     "status": "number"
   }
-  //...
+  ...
 ]
 ```
