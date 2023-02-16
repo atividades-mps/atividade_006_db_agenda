@@ -55,11 +55,11 @@
 
 ```json
 {
-  "id": "string", // gerado automaticamente
+  "id": "string",
   "name": "string",
   "email": "string",
   "password": "string",
-  "status": "number" // 0 - deslogado, 1 - logado, 2 - deletado
+  "status": "number"
 }
 ```
 
@@ -110,7 +110,7 @@
   "name": "string",
   "email": "string",
   "password": "string",
-  "status": "number" // 0 - deslogado, 1 - logado, 2 - deletado
+  "status": "number"
 }
 ```
 
@@ -134,7 +134,7 @@
   "name": "string",
   "email": "string",
   "password": "string",
-  "status": "number" // 0 - deslogado, 1 - logado, 2 - deletado
+  "status": "number"
 }
 ```
 
@@ -168,7 +168,7 @@
   "title": "string",
   "datetime": "datetime",
   "description": "string",
-  "status": "number" // 0 - pendente, 1 - cancelado
+  "status": "number"
 }
 ```
 
@@ -219,7 +219,7 @@
   "title": "string",
   "datetime": "datetime",
   "description": "string",
-  "status": "number" // 0 - pendente, 1 - cancelado
+  "status": "number"
 }
 ```
 
@@ -245,7 +245,7 @@
     "title": "string",
     "datetime": "datetime",
     "description": "string",
-    "status": "number" // 0 - pendente, 1 - cancelado
+    "status": "number"
   }
   //...
 ]
@@ -274,7 +274,7 @@
     "title": "string",
     "datetime": "datetime",
     "description": "string",
-    "status": "number" // 0 - pendente, 1 - cancelado
+    "status": "number"
   }
   //...
 ]
