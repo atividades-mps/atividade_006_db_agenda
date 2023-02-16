@@ -4,7 +4,7 @@
 
 #### HTTP Request
 
-> `GET /users/login`
+`GET /users/login`
 
 #### HTTP Params
 
@@ -21,7 +21,7 @@
 
 ## **Fazer logout**
 
-> `GET /users/:id/logout`
+`GET /users/:id/logout`
 
 #### HTTP Params
 
@@ -37,7 +37,7 @@
 
 ## **Fazer cadastro de usuário**
 
-> `POST /users`
+`POST /users`
 
 #### HTTP Request Body
 
@@ -67,7 +67,7 @@
 
 ## **Deletar conta de usuário**
 
-> `DELETE /users/:id`
+`DELETE /users/:id`
 
 #### HTTP Params
 
@@ -83,7 +83,7 @@
 
 ## **Atualizar conta de usuário**
 
-> `PATCH /users/:id`
+`PATCH /users/:id`
 
 | Parâmetro          | Tipo   | Descrição                      | Obrigatório ✅/ Opcional ❌ |
 | ------------------ | ------ | ------------------------------ | --------------------------- |
@@ -118,7 +118,7 @@
 
 ## **Buscar por id a conta de usuário**
 
-> `GET /users/:id`
+`GET /users/:id`
 
 | Parâmetro          | Tipo   | Descrição                      | Obrigatório ✅/ Opcional ❌ |
 | ------------------ | ------ | ------------------------------ | --------------------------- |
@@ -142,7 +142,7 @@
 
 ## **Cadastrar evento**
 
-> `POST /users/:id/events`
+`POST /users/:id/events`
 
 | Parâmetro          | Tipo   | Descrição                      | Obrigatório ✅/ Opcional ❌ |
 | ------------------ | ------ | ------------------------------ | --------------------------- |
@@ -176,7 +176,7 @@
 
 ## **Deletar evento**
 
-> `DELETE /users/:id/events/:eventid`
+`DELETE /users/:id/events/:eventid`
 
 | Parâmetro               | Tipo   | Descrição                      | Obrigatório ✅/ Opcional ❌ |
 | ----------------------- | ------ | ------------------------------ | --------------------------- |
@@ -191,7 +191,7 @@
 
 ## **Atualizar evento**
 
-> `PATCH /users/:id/events/:eventid`
+`PATCH /users/:id/events/:eventid`
 
 | Parâmetro               | Tipo   | Descrição                      | Obrigatório ✅/ Opcional ❌ |
 | ----------------------- | ------ | ------------------------------ | --------------------------- |
@@ -227,7 +227,7 @@
 
 ## **Visualizar eventos por dia**
 
-> `GET /users/:id/events?day=[date]`
+`GET /users/:id/events?day=[date]`
 
 | Parâmetro          | Tipo   | Descrição                                  | Obrigatório ✅/ Opcional ❌ |
 | ------------------ | ------ | ------------------------------------------ | --------------------------- |
@@ -255,7 +255,7 @@
 
 ## **Visualizar eventos por mês e semana**
 
-> `GET /users/:id/events?startDate=[date]&endDate=[date]`
+`GET /users/:id/events?startDate=[date]&endDate=[date]`
 
 | Parâmetro          | Tipo   | Descrição                                                    | Obrigatório ✅/ Opcional ❌ |
 | ------------------ | ------ | ------------------------------------------------------------ | --------------------------- |
