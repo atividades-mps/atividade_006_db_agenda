@@ -1,157 +1,304 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 006 - Banco de dados da Agenda</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cronologus</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+
+        * {
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        html,
+        body,
+        .root {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        * ::-webkit-scrollbar {
+            background-color: transparent;
+            width: 8px;
+        }
+
+        * ::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background: #c0c0c0;
+        }
+
+        a {
+            height: 100%;
+            width: 100%;
+            color: inherit;
+        }
+
+        .img {
+            transition: 0.2s;
+            animation: fade-in 0.2s linear both;
+        }
+
+        .header {
+            color: white;
+            background-color: black;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header a {
+            text-decoration: none;
+        }
+
+        .header .menu {
+            display: flex;
+            padding: 8px;
+            gap: 16px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .header .menu .option {
+            padding: 8px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .header .menu .option:first-of-type {
+            margin-left: auto;
+        }
+
+        .header .menu .option:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .header .banner {
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+        }
+
+        .header .banner .title-w {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .header .banner .title-w .description {
+            font-size: 20px;
+        }
+
+        .header .banner .title-w .title {
+            font-size: 80px;
+        }
+
+        .header .banner img {
+            width: 500px;
+            height: auto;
+        }
+
+        .header .button-try {
+            width: 20%;
+            padding: 8px;
+            border-radius: 2px;
+            background-color: white;
+            color: black;
+            align-self: center;
+            font-weight: bold;
+            border: 0;
+            cursor: pointer;
+            transition: 0.2s;
+            text-transform: uppercase;
+        }
+
+        .header .button-try:hover {
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .container {
+            padding: 32px;
+            gap: 8px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main .container .wireframes {
+            width: 100%;
+            height: 600px;
+        }
+
+        .main .container.reverse {
+            flex-flow: row-reverse;
+        }
+
+        .main .container .left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .container .left .description {
+            line-break: anywhere;
+        }
+
+        .main .container.light {
+            background-color: white;
+            color: black;
+        }
+
+        .main .container.dark {
+            background-color: black;
+            color: white;
+        }
+
+        .main .container img {
+            max-width: 60%;
+            max-height: 500px;
+            height: auto;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 8px;
+        }
+
+        .preview {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview img {
+            max-width: 90%;
+            height: auto;
+            max-height: 90%;
+        }
+
+        .preview .button {
+            width: 64px;
+            padding: 8px;
+            border-radius: 2px;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            border-radius: 2px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 4px;
+            margin-left: auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes fade-in {
+            0% {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 100;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="root">
-        <div class="left">
-            <h2 class="title">Tabela de Conteúdos</h2>
-            <ul class="topics">
-                <li class="link">
-                    <a href="#der">1. Diagrama Entidade-Relacionamento</a>
-                </li>
-                <li class="link">
-                    <a href="#dictionary">2. Dicionário de dados</a>
+        <header class="header">
+            <ul class="menu">
+                <li class="option">Início</li>
+                <li class="option"><a href="#wire">Wireframes</a></li>
+                <li class="option"><a href="./docs.html">Documentação</a></li>
+                <li class="option"><a href="https://github.com/atividades-mps/atividade_final_cronologus">Github</a>
                 </li>
             </ul>
-        </div>
+            <div class="banner">
+                <div class="title-w">
+                    <h1 class="title">Cronologus </h1>
+                    <p class="description">Um aplicativo de agenda para gerenciamento de eventos.</p>
+                </div>
+                <img src="./docs/cronologusapp.png" alt="Banner">
+            </div>
+            <button class="button-try">Acessar agenda</button>
+        </header>
         <main class="main">
-            <h1 class="title">Atividade 006 - Banco de Dados da Agenda</h1>
-            <ul class="content">
-                <li class="item" id="der">
-                    <h2 class="title">Diagrama Entidade-Relacionamento</h2>
-                    <img src="./assets/der.png" alt="DER">
-                    <p class="text">O diagrama entidade-relacionamento do sistema apresenta duas entidades: usuários e
-                        seus respectivos eventos. Para a geração desde diagrama, foi utilizado o <a
-                            href="https://www.mysql.com/products/workbench/">MySQL Workbench</a> para a geração
-                        automatizada do esquema e das tabelas.</p>
-                </li>
-                <li class="item" id="dictionary">
-                    <h2 class="title">Dicionário de dados</h2>
-                    <p class="text">Com base no diagrama entidade-relacionamento mostrado anteriormente, abaixo consta o
-                        dicionário de dados descrevendo os atributos e seus tipos e tamanhos.</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th colspan="5">Tabela: Usuário</th>
-                            </tr>
-                            <tr>
-                                <th>Atributo</th>
-                                <th>Classe</th>
-                                <th>Tipo</th>
-                                <th>Tamanho</th>
-                                <th>Descrição</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>usuario_id</td>
-                                <td>Identificador</td>
-                                <td>INT</td>
-                                <td>2147483647</td>
-                                <td>Atributo que identifica um usuário</td>
-                            </tr>
-                            <tr>
-                                <td>usuario_nome</td>
-                                <td>Simples</td>
-                                <td>VARCHAR</td>
-                                <td>100</td>
-                                <td>Nome do usuário</td>
-                            </tr>
-                            <tr>
-                                <td>usuario_email</td>
-                                <td>Simples</td>
-                                <td>VARCHAR</td>
-                                <td>100</td>
-                                <td>E-mail do usuário</td>
-                            </tr>
-                            <tr>
-                                <td>usuario_status</td>
-                                <td>Simples</td>
-                                <td>INT</td>
-                                <td>1</td>
-                                <td>Indica o status do usuário. Assume os valores: 0 (Deslogado), 1 (Logado), 2
-                                    (Deletado)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th colspan="5">Tabela: Evento</th>
-                            </tr>
-                            <tr>
-                                <th>Atributo</th>
-                                <th>Classe</th>
-                                <th>Tipo</th>
-                                <th>Tamanho</th>
-                                <th>Descrição</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>evento_id</td>
-                                <td>Identificador</td>
-                                <td>INT</td>
-                                <td>2147483647</td>
-                                <td>Atributo que identifica um evento</td>
-                            </tr>
-                            <tr>
-                                <td>evento_titulo</td>
-                                <td>Simples</td>
-                                <td>VARCHAR</td>
-                                <td>100</td>
-                                <td>Título do evento</td>
-                            </tr>
-                            <tr>
-                                <td>evento_descricao</td>
-                                <td>Simples</td>
-                                <td>VARCHAR</td>
-                                <td>200</td>
-                                <td>Descrição do evento</td>
-                            </tr>
-                            <tr>
-                                <td>evento_data_hora</td>
-                                <td>Simples</td>
-                                <td>DATETIME</td>
-                                <td>-</td>
-                                <td>Indica o horário e a data que o evento irá ocorrer</td>
-                            </tr>
-                            <tr>
-                                <td>evento_status</td>
-                                <td>Simples</td>
-                                <td>INT</td>
-                                <td>1</td>
-                                <td>Indica o status do evento. Assume os valores: 0 (Pendente), 1 (Cancelado)</td>
-                            </tr>
-                            <tr>
-                                <td>usuario_id</td>
-                                <td>Chave estrangeira</td>
-                                <td>INT</td>
-                                <td>2147483647</td>
-                                <td>Faz referência a chave-primária pertencente a um usuário</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </li>
-            </ul>
-
-            <footer class="footer">
-                MPS | 2023
-            </footer>
+            <div class="container light" id="wire">
+                <iframe class="wireframes"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FH11AXBuIR5J7cMXpniflZX%2FCronologus%3Fnode-id%3D5%253A4%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D5%253A4"
+                    allowfullscreen></iframe>
+            </div>
         </main>
+
+        <footer class="footer">
+            <span class="name">© Cronologus</span>
+        </footer>
+    </div>
+
+    <div class="preview hidden">
+        <button class="button">Fechar</button>
+        <img src="./docs/cronologusapp.png" alt="Preview">
     </div>
 
     <script>
-        const footer = document.querySelector('footer')
-        footer.innerHTML = `MPS | ${new Date().getFullYear()}`
+        function loadFooter() {
+            const footerTextDiv = document.querySelector(".footer .name");
+            const text = `© Cronologus ${new Date().getFullYear()}`;
+            footerTextDiv.innerHTML = text;
+        }
+
+        function addPreviewEvent() {
+            const previewDiv = document.querySelector(".preview");
+            const previewImg = document.querySelector(".preview img");
+            document.querySelectorAll(".container img").forEach((div) => {
+                div.addEventListener("click", (event) => {
+                    previewDiv.classList.remove("hidden");
+                    previewImg.src = event.target.src;
+                });
+            });
+            document.querySelector(".preview button").addEventListener("click", () => {
+                previewDiv.classList.add("hidden");
+            });
+        }
+
+        function main() {
+            loadFooter();
+            addPreviewEvent();
+        }
+
+        main();
     </script>
 </body>
 

@@ -94,3 +94,7 @@ ul {
   margin-top: 100px;
   color: #000000aa;
 }
+.item.dark img {
+  background: black;
+  width: 500px;
+}
